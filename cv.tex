@@ -1,11 +1,10 @@
-\documentclass[letterpaper, 10pt, oneside]{article}
+\documentclass[letterpaper,10pt,oneside]{article}
 
-\intput{./parts/preamble.tex}
-% \lfoot{\thepage of \pageref{LastPage}}
+\input{./parts/preamble.tex}
+%\lfoot{\thepage of \pageref{LastPage}}
 \rfoot{\CVNote}
 
-% CUSTOM COMMANDS %
-
+%%% CUSTOM COMMANDS %%%
 % \Title
 % \SubTitle
 % \Body
@@ -17,6 +16,7 @@
 % \BulletItem
 % \SubBulletItem
 % \Entry
+% \SubEntry
 % \Item
 % \SubItem
 % \NumberedItem
@@ -27,13 +27,16 @@
 
 \input{./parts/title.tex}
 
-\begin{body}
-
+\begin{Body}
 
 \input{./parts/education.tex}
-\input{./parts/experience.tex}
+\input{./parts/research_experience.tex}
+\input{./parts/teaching_experience.tex}
+\input{./parts/awards.tex}
+\input{./parts/internship_experience.tex}
+\input{./parts/service.tex}
+\input{./parts/relevant_coursework.tex}
 
-
-\end{body}
+\end{Body}
 
 \end{document}
