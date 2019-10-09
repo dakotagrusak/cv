@@ -1,11 +1,11 @@
-\usepackage[left=0.70in, right=o.70in, top=0.50in, bottom=0.45in, nohead,  includefoot]{geometry}
+\usepackage[left=0.70in,right=o.70in, top=0.50in, bottom=0.45in, nohead,includefoot]{geometry}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{fontspec}
 \usepackage{lastpage}
-\pagestyle
+\pagestyle{fancy}
 
 %%%%%%%%%%%
 % CV INFO %
@@ -15,11 +15,12 @@
 \newcommand{\CVTitle}{CV}
 \newcommand{\CVEmail}{dgrusak@trinity.edu}
 \newcommand{\CVPhone}{(713) 657-0096}
-\newcommand{\CVNote}{\footnotesize{Compiled on {\today}, available at \href{\CVWebpageCV}{\CVWebpageCV}.}}
-\newcommand{\CVWebpage}{dakotawgrusak.com}
+\newcommand{\CVNote}{\footnotesize{Compiled on {\today}, available at \href{\CVWebpageCV}{\CVWebpageCV}. \end{footnotesize}}
+\newcommand{\CVWebpage}{github.dakotagrusak.io}
 \newcommand{\CVWebpageCV}{github.com/dakotawgrusak/cv.git}
 
 \newcommand{\TrinityTitle}{\href{https://new.trinity.edu/academics/departments/engineering-science}{\textbf{Trinity University}}, San Antonio, TX}
+% \newcommand{\TrinityTitle}{\href{https://new.trinity.edu/academics/departments/computer-science}{\textbf{Trinity University}}, San Antonio, TX}
 
 %%%%%%%%%%%%%%
 % PAGE STYLE %
@@ -137,12 +138,10 @@ BoldFont=FreeSerifBold,
 BoldItalicFont=FreeSerifBoldItalic]
 {FreeSerif.otf}}
 
-% Sans-serif font: Changed to "Tinos".
-\renewcommand{\sffamily}{\rmfamily}
-% Typewriter (monospace) font: Changed to "Tinos".
-\renewcommand{\ttfamily}{\rmfamily}
-% Small caps font: Changed to "Tinos".
-\renewcommand{\scshape}{\rmfamily}
+\renewcommand{\sffamily}{\rmfamily} % Sans-serif font: Changed to "Tinos".
+\renewcommand{\ttfamily}{\rmfamily}% Typewriter (monospace) font: Changed to "Tinos".
+
+\renewcommand{\scshape}{\rmfamily}% Small caps font: Changed to "Tinos".
 %\renewcommand{\textsc}[1]{\textbf{\MakeUppercase{#1}}}
 
 % Font styles.
@@ -159,7 +158,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 % See: https://unicode-table.com/en/
 \newcommand{\BulletSymbol}{{\normalfont\fontsize{6.5}{7.8}\selectfont\raisebox{0.17em}{\char"25A0}}}
 \newcommand{\SubBulletSymbol}{{\normalfont\fontsize{6}{7.2}\selectfont\raisebox{0.17em}{\char"25CF}}}
-\newcommand{\SubSubBulletSymbol}{{\normalfont\fontsize{6}{7.2}\selectfont\raisebox{0.17em}{\char"25CB}}}
+% \newcommand{\SubSubBulletSymbol}{{\normalfont\fontsize{6}{7.2}\selectfont\raisebox{0.17em}{\char"25CB}}}
 \newcommand{\TildeSymbol}{{\normalfont\char"007E}}
 
 %%%%%%%%%%%%%%%%%%%
@@ -274,20 +273,20 @@ BoldItalicFont=FreeSerifBoldItalic]
 \ignorespaces%
 }
 
-% Macro: SubSubBulletItem.
-\newsavebox{\SubSubBulletItemIndentBox}
-\newlength{\SubSubBulletItemIndentWidth}
-%
-\newcommand{\SubSubBulletItem}
-{\par\vspace{0\baselineskip}%
-\savebox{\SubSubBulletItemIndentBox}{\hspace{9.7mm}\SubSubBulletSymbol\hspace{1.5mm}}%
-\settowidth{\SubSubBulletItemIndentWidth}{\usebox{\SubSubBulletItemIndentBox}}%
-\parshape 2%
-\labelwidth \linewidth%
-\dimexpr\labelwidth+\SubSubBulletItemIndentWidth\relax \dimexpr\linewidth-\SubSubBulletItemIndentWidth\relax%
-\usebox{\SubSubBulletItemIndentBox}%
-\ignorespaces%
-}
+% % Macro: SubSubBulletItem.
+% \newsavebox{\SubSubBulletItemIndentBox}
+% \newlength{\SubSubBulletItemIndentWidth}
+% %
+% \newcommand{\SubSubBulletItem}
+% {\par\vspace{0\baselineskip}%
+% \savebox{\SubSubBulletItemIndentBox}{\hspace{9.7mm}\SubSubBulletSymbol\hspace{1.5mm}}%
+% \settowidth{\SubSubBulletItemIndentWidth}{\usebox{\SubSubBulletItemIndentBox}}%
+% \parshape 2%
+% \labelwidth \linewidth%
+% \dimexpr\labelwidth+\SubSubBulletItemIndentWidth\relax \dimexpr\linewidth-\SubSubBulletItemIndentWidth\relax%
+% \usebox{\SubSubBulletItemIndentBox}%
+% \ignorespaces%
+% }
 
 % Macro: Entry.
 \newcommand{\Entry}
@@ -329,17 +328,17 @@ BoldItalicFont=FreeSerifBoldItalic]
 \ignorespaces%
 }
 
-% Macro: SubSubItem (aligns horizontally with SubSubBulletItem).
-\newcommand{\SubSubItem}
-{\par\vspace{0\baselineskip}%
-\savebox{\SubSubBulletItemIndentBox}{\hphantom{\hspace{9.7mm}\SubSubBulletSymbol\hspace{1.5mm}}}%
-\settowidth{\SubSubBulletItemIndentWidth}{\usebox{\SubSubBulletItemIndentBox}}%
-\parshape 2%
-\labelwidth \linewidth%
-\dimexpr\labelwidth+\SubSubBulletItemIndentWidth\relax \dimexpr\linewidth-\SubSubBulletItemIndentWidth\relax%
-\usebox{\SubSubBulletItemIndentBox}%
-\ignorespaces%
-}
+% % Macro: SubSubItem (aligns horizontally with SubSubBulletItem).
+% \newcommand{\SubSubItem}
+% {\par\vspace{0\baselineskip}%
+% \savebox{\SubSubBulletItemIndentBox}{\hphantom{\hspace{9.7mm}\SubSubBulletSymbol\hspace{1.5mm}}}%
+% \settowidth{\SubSubBulletItemIndentWidth}{\usebox{\SubSubBulletItemIndentBox}}%
+% \parshape 2%
+% \labelwidth \linewidth%
+% \dimexpr\labelwidth+\SubSubBulletItemIndentWidth\relax \dimexpr\linewidth-\SubSubBulletItemIndentWidth\relax%
+% \usebox{\SubSubBulletItemIndentBox}%
+% \ignorespaces%
+% }
 
 % Macro: NumberedItem.
 \newcommand{\MaxNumberedItem}{[88]}
